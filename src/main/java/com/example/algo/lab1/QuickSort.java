@@ -20,10 +20,12 @@ public class QuickSort {
 
 
     static void swap(int[] arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-        swapCounter++;
+        if(i!=j) {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            swapCounter++;
+        }
     }
 
     static int partition(int[] arr,String order, int low, int high) {
